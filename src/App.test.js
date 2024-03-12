@@ -1,14 +1,8 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react';
+import BookingForm from './BookingForm';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const reserveTable = screen.getByText("Reserve Table");
-  expect(reserveTable).toBeInTheDocument();
-
-  const reserveTableButton = screen.getByRole("button");
-  fireEvent.click(reserveTableButton);
-
-  const chooseTimeLabel = screen.getByText("Choose Time");
-  expect(chooseTimeLabel).toBeInTheDocument();
+test('Renders the BookingForm heading', () => {
+  render(<BookingForm availableTimes={["17:00", "17:30"]}/>);
+  const headingElement = screen.getByText("Book a table at our restaurant");
+  expect(headingElement).toBeInTheDocument();
 });
