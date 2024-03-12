@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const reserveTable = screen.getByText("Reserve Table");
+  expect(reserveTable).toBeInTheDocument();
+
+  const reserveTableButton = screen.getByRole("button");
+  fireEvent.click(reserveTableButton);
+
+  const chooseTimeLabel = screen.getByText("Choose Time");
+  expect(chooseTimeLabel).toBeInTheDocument();
 });

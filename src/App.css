@@ -60,7 +60,7 @@ header>img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 20rem;
 }
 
 nav ul {
@@ -80,16 +80,20 @@ main {
 
 section {
   display: flex;
+  justify-content: space-between;
+
 }
 
 article {
-  flex: 1;
+  padding: 5rem;
 }
+
 article h1 {
   color: #F4CE14;
 }
 
-article button {
+article button,
+input[type="submit"] {
   background-color: #F4CE14;
   padding: 20px;
   text-decoration: none;
@@ -98,15 +102,18 @@ article button {
   border: none;
   cursor: pointer;
 }
-article h2, article p {
+
+article h2,
+article p {
   color: #EDEFEE;
+  text-align: justify;
 }
 
 article img {
   border-radius: 12px;
-  width: 300px;
-  height: 400px;
+  width: 20rem;
 }
+
 
 footer {
   display: flex;
@@ -121,4 +128,28 @@ footer img {
 
 footer div {
   flex: 1;
+}
+
+#form-section {
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  color: #EDEFEE;
+  font-size: large;
+}
+
+fieldset {
+  margin: 5px;
+}
+
+fieldset>div {
+  margin: 20px;
+  display: flex;
+}
+
+fieldset>div label {
+  flex: 1;
+  margin-right: 150px;
 }

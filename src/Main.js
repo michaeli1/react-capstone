@@ -5,10 +5,11 @@ const Main  = () => {
         <section>
             <article>
                 <h1>Little Lemon</h1>
-                <h2> Chicago</h2>
+                <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                 <Link to="/Booking"><button> Reserve Table</button></Link>
             </article>
+
             <article>
                 <img src={food} alt="Main" />
             </article>

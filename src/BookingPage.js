@@ -1,9 +1,10 @@
-const Booking  = () => {
+import React from "react";
+import BookingForm from "./BookingForm";
+
+const Booking = (props) => {
     return <main>
-        <section>
-            <article>
-                <h1>Booking</h1>
-            </article>
+        <section id="form-section">
+            <BookingForm availableTimes={props.availableTimes}/>
         </section>
     </main>
 }
