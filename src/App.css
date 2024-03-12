@@ -80,6 +80,7 @@ main {
 
 section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 }
@@ -106,7 +107,6 @@ input[type="submit"] {
 article h2,
 article p {
   color: #EDEFEE;
-  text-align: justify;
 }
 
 article img {
