@@ -39,17 +39,17 @@ function App() {
   }
 
   const initialState = initializeTimes();
-  console.log(initialState);
 
   function updateTimes(state, date) {
     return { availableTimes: fetchAPI(new Date(date)) }
   }
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function submitForm(formData) {
+    console.log(formData);
     if (submitAPI(formData)) {
-      // navigate("/confirmed");
+      navigate("/confirmed");
     };
   }
 
